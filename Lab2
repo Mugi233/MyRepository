@@ -1,39 +1,27 @@
-#include <stdio.h>  
-int main(){  
-    int i=1;  
-    double j=0;  
-    long f;  
-    switch(i){  
-        case 0:  
-            break;  
-        case 1:  
-            break;  
-        case 2:  
-            break;  
-        default:  
-            break;  
-    }  
-    switch(i){  
-        case 0:  
-            break;  
-        case 1:  
-            break;  
-        default:  
-            break;  
-    }  
-    if(i<0){  
-        if(i<-1){}  
-        else{}  
-    }  
-    else if(i>0){  
-        if (i>2){}  
-        else if (i==2) {}  
-        else if (i>1) {}  
-        else {}  
-    }  
-    else{  
-        if(j!=0){}  
-        else{}  
-    }  
-    return 0;  
-}  
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int countchar(char *str,char a){
+    int n = 0;
+    int i = 0;
+    
+    while(*(str+i) != '\0'){
+        if(*(str+i) == a){
+        	n++;
+		}
+        i++;
+    }
+    return n;
+}
+
+int main() {
+    char str[20], a;
+    int n;
+    
+    gets(str);
+    a = getchar();
+    n = countchar(str,a);
+    cout << n << endl;
+}
